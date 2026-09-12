@@ -1,12 +1,12 @@
 """
 https://leetcode.com/problems/non-overlapping-intervals/
 
-Time: O(N)
+Time: O(N log N), intervals 정렬
 Space: O(1)
 """
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        # 1. end 오름차순 intervals 정렬
+        # end 오름차순 intervals 정렬
         intervals.sort(key=lambda x: x[1])
 
         # remove count
